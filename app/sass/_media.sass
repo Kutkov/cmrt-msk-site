@@ -65,12 +65,22 @@
 	.menu
 		.wrapper
 			max-width: 750px
+	.wrapp-dominance
+		&__list
+			display: none
+	.owl-carousel
+		display: block !important
 
 	/**/
 @media only screen and (max-width : 991px)
 	.menu-collapser
 		.search-input-m
 			display: block
+	.wrapp-form
+		&__info
+			&-text
+				width: 390px
+		&__form
 	/**/
 
 /* Small Devices, Tablets */
@@ -87,18 +97,72 @@
 		&__number
 			li
 				padding: 15px 15px 15px 55px
+	.owl-carousel
+		.owl-item
+			.item
+				padding: 0 15px
+	.wrapp-form
+		margin-top: 70px
+		&__info
+			width: auto
+			height: auto
+			float: none
+			padding: 20px 0
+			&-text
+				float: none
+				margin-top: 0
+				margin-bottom: 0
+				width: auto
+				padding-bottom: 0
+				border-bottom: none
+				margin-left: 80px
+		&__form
+			float: none
+			width: auto
+			padding-top: 30px
+			height: auto
+			padding-bottom: 20px
+			input, textarea
+				margin-left: 80px
+				margin-top: 20px
+			.form-text
+				width: 370px
+			.text-agreement
+				margin-left: 80px
+			.form-name
+				margin-top: 0
 	/**/
 
 @media only screen and (max-width : 582px)
 	.wrapp-banner
 		&__title
 			font-size: 36px
+	.owl-carousel
+		.owl-item
+			.item
+				padding: 0 50px
 	/**/
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.wrapp-banner
 		&__title
 			font-size: 30px
+	.owl-carousel
+		.owl-item
+			.item
+				padding: 0 30px
+	.wrapp-form
+		&__info
+			&-text
+				margin-left: 70px
+				font-size: 20px
+		&__form
+			.form-text
+				width: 290px
+			input, textarea
+				margin-left: 70px
+			.text-agreement
+				margin-left: 70px
 	/**/
 
 @media only screen and (max-width : 380px)
@@ -107,6 +171,19 @@
 			font-size: 26px
 		&__sub-title
 			font-size: 26px
+	.owl-carousel
+		.owl-item
+			.item
+				padding: 0
+	.wrapp-form
+		&__info
+			&-text
+				margin-left: 15px
+		&__form
+			input, textarea
+				margin-left: 15px
+			.text-agreement
+				margin-left: 15px
 	/**/
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

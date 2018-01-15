@@ -33,10 +33,6 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
-
-html, body
-	height: 100%
-
 body
 	font-size: 16px
 	min-width: 320px
@@ -439,9 +435,7 @@ ul.slimmenu
 		border-radius: 18px
 /* section dominance */	
 .wrapp-dominance
-	// margin-top: 120px
-	// margin-bottom: 100px
-	margin: 120px auto 100px auto
+	margin: 110px auto 80px auto
 	width: 1140px
 	&__list
 		display: flex
@@ -459,6 +453,47 @@ ul.slimmenu
 				margin-bottom: 10px
 			.dominance-info
 				margin-top: 0
+// owl-carousel
+
+.owl-carousel
+	display: none !important
+	.owl-nav 
+		.owl-prev,.owl-next
+			position: absolute
+			top: 20%
+			border-radius: 30px
+			padding: 3px 10px
+			background: $pale
+			&:hover
+				background: $blue
+		.owl-prev
+			margin-left: 25px
+			left: 0
+		.owl-next
+			right: 0
+			margin-right: 25px
+			
+	.owl-item
+		text-align: center
+		.item
+			img
+				display: inline
+				width: auto
+			.pink-title
+				color: $pink
+				font-weight: bold
+				font-size: 18px
+	.owl-dots
+		.owl-dot
+			span
+				background: $pale
+				&:hover
+					background: $blue
+		.active
+			span
+				background: $blue !important
+
+
 /* section ten questions */
 .wrapp-questions
 	&__title
