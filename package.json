@@ -21,8 +21,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-rsync": "0.0.8",
     "gulp-sass": "^3.1.0",
-    "gulp-ttf2woff": "^1.1.1",
-    "gulp-ttf2woff2": "^2.0.2",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "vinyl-ftp": "^0.6.0"
