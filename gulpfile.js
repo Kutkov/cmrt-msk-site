@@ -19,15 +19,15 @@ var gulp           = require('gulp'),
 // Пользовательские скрипты проекта
 
 gulp.task('ttf2woff', function(){
-  gulp.src(['app/fonts/Raleway/*.ttf'])
+  gulp.src(['app/fonts/PTSans/*.ttf'])
     .pipe(ttf2woff())
-    .pipe(gulp.dest('app/fonts/Raleway'));
+    .pipe(gulp.dest('app/fonts/PTSans'));
 });
 
 gulp.task('ttf2woff2', function(){
-  gulp.src(['app/fonts/Raleway/*.ttf'])
+  gulp.src(['app/fonts/PTSans/*.ttf'])
     .pipe(ttf2woff2())
-    .pipe(gulp.dest('app/fonts/Raleway'));
+    .pipe(gulp.dest('app/fonts/PTSans'));
 });
 
 gulp.task('common-js', function() {
