@@ -1,4 +1,6 @@
 var gulp           = require('gulp'),
+	ttf2woff = require('gulp-ttf2woff'),
+	ttf2woff2 = require('gulp-ttf2woff2'),
 		gutil          = require('gulp-util' ),
 		sass           = require('gulp-sass'),
 		browserSync    = require('browser-sync'),
@@ -15,6 +17,18 @@ var gulp           = require('gulp'),
 		rsync          = require('gulp-rsync');
 
 // Пользовательские скрипты проекта
+
+gulp.task('ttf2woff', function(){
+  gulp.src(['app/fonts/Raleway/*.ttf'])
+    .pipe(ttf2woff())
+    .pipe(gulp.dest('app/fonts/Raleway'));
+});
+
+gulp.task('ttf2woff2', function(){
+  gulp.src(['app/fonts/Raleway/*.ttf'])
+    .pipe(ttf2woff2())
+    .pipe(gulp.dest('app/fonts/Raleway'));
+});
 
 gulp.task('common-js', function() {
 	return gulp.src([
@@ -53,9 +67,9 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-	.pipe(rename({suffix: '.min', prefix : ''}))
+	//.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleanCSS()) // Опционально, закомментировать при отладке
+	//.pipe(cleanCSS()) // Опционально, закомментировать при отладке
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
