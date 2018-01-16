@@ -1142,7 +1142,7 @@ a {
   color: #fff;
   font-size: 14px;
   text-align: center;
-  background-color: #0e0e0e;
+  background-color: #0588d0;
   -webkit-border-radius: 2px;
           border-radius: 2px;
   cursor: pointer;
@@ -1156,7 +1156,7 @@ a {
   -webkit-box-sizing: border-box; }
   .collapse-button:hover, .collapse-button:focus {
     color: #fff;
-    background-color: #040404; }
+    background-color: #0588d0; }
   .collapse-button .icon-bar {
     display: block;
     height: 2px;
@@ -1253,9 +1253,16 @@ ul.slimmenu {
         vertical-align: middle; }
       ul.slimmenu li .sub-toggle > i {
         display: inline-block;
-        color: #333;
+        color: #0588d0;
         font-size: 18px;
-        vertical-align: middle; }
+        vertical-align: middle;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
+    ul.slimmenu li .has-submenu:hover > .sub-toggle > i {
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
   ul.slimmenu > li:first-child, ul.slimmenu > li.has-submenu + li {
     border-left: 0; }
 
@@ -1310,57 +1317,6 @@ ul.slimmenu {
       color: #0588d0;
       text-decoration: underline; }
 
-/* section programms, delete if programms-scroll have a beast mode */
-.wrapp-programms {
-  max-width: 1170px;
-  margin: 30px auto -36px auto; }
-  .wrapp-programms .programms {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0;
-    margin: 0 15px;
-    list-style: none;
-    text-transform: uppercase;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
-    .wrapp-programms .programms li {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-flex: 1;
-      -webkit-flex: auto;
-          -ms-flex: auto;
-              flex: auto;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      background: #1e93d4;
-      border-bottom: 4px solid #fff; }
-      .wrapp-programms .programms li:last-child {
-        min-width: 145px; }
-      .wrapp-programms .programms li:nth-child(2n) {
-        background: #0588d0;
-        border-bottom: 4px solid #ccc; }
-      .wrapp-programms .programms li:nth-child(3) {
-        min-width: 285px; }
-      .wrapp-programms .programms li:nth-child(4) a {
-        padding: 19px 20px; }
-      .wrapp-programms .programms li:nth-child(5) a {
-        padding: 19px 20px; }
-      .wrapp-programms .programms li a {
-        padding: 6px 20px;
-        color: #fff;
-        font-size: 16px;
-        z-index: 2; }
-        .wrapp-programms .programms li a:hover {
-          color: #ccc; }
-
 /* section test */
 .wrapp-programms-scroll {
   margin-top: 50px;
@@ -1403,9 +1359,7 @@ ul.slimmenu {
           float: left;
           height: 70px;
           height: 100%;
-          padding: 0;
           background: #1e93d4;
-          padding: 6px 20px;
           border-bottom: 4px solid #fff; }
           .wrapp-programms-scroll .scrollframe-container .frame ul li:nth-child(2n) {
             background: #0588d0;
@@ -1421,10 +1375,16 @@ ul.slimmenu {
           .wrapp-programms-scroll .scrollframe-container .frame ul li:last-child {
             width: 145px; }
           .wrapp-programms-scroll .scrollframe-container .frame ul li a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: 6px 20px;
             color: #fff;
             font-size: 16px;
             z-index: 2;
             text-transform: uppercase; }
+            .wrapp-programms-scroll .scrollframe-container .frame ul li a:hover {
+              text-decoration: underline; }
 
 /* section bannner */
 .wrapp-banner {
@@ -1534,7 +1494,7 @@ ul.slimmenu {
   text-align: center;
   color: #0588d0;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 24px;
   font-family: "Raleway", sans-serif; }
   .wrapp-questions__title-link {
     color: #0588d0;
@@ -1692,6 +1652,10 @@ ul.slimmenu {
     width: 100%;
     margin: 0;
     padding-left: 10px; }
+    ul.slimmenu li .has-submenu:hover > .sub-toggle > i {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
   .wrapp-menu {
     padding: 0; }
   .wrapp-dominance {
@@ -1775,10 +1739,14 @@ ul.slimmenu {
     font-size: 36px; }
   .owl-carousel .owl-item .item {
     padding: 0 50px; }
+  .wrapp-simple__list {
+    padding: 50px 15px; }
   /**/ }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .wrapp-questions__title {
+    font-size: 20px; }
   .wrapp-banner__title {
     font-size: 30px; }
   .owl-carousel .owl-item .item {
@@ -1792,6 +1760,8 @@ ul.slimmenu {
     margin-left: 70px; }
   .wrapp-form__form .text-agreement {
     margin-left: 70px; }
+  .wrapp-simple__title {
+    font-size: 20px; }
   /**/ }
 
 @media only screen and (max-width: 380px) {
@@ -1807,6 +1777,10 @@ ul.slimmenu {
     margin-left: 15px; }
   .wrapp-form__form .text-agreement {
     margin-left: 15px; }
+  .wrapp-simple__list {
+    padding: 50px 15px; }
+    .wrapp-simple__list li {
+      padding-left: 35px; }
   /**/ }
 
 /* Custom, iPhone Retina */
