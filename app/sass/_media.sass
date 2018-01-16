@@ -42,6 +42,11 @@
 		width: 100%
 		margin: 0
 		padding-left: 10px
+		li
+			.has-submenu:hover
+				> .sub-toggle
+					> i
+						transform: none
 	.wrapp-menu
 		padding: 0
 	.wrapp-dominance
@@ -80,7 +85,6 @@
 		&__info
 			&-text
 				width: 390px
-		&__form
 	/**/
 
 /* Small Devices, Tablets */
@@ -141,9 +145,15 @@
 		.owl-item
 			.item
 				padding: 0 50px
+	.wrapp-simple
+		&__list
+			padding: 50px 15px
 	/**/
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.wrapp-questions
+		&__title
+			font-size: 20px
 	.wrapp-banner
 		&__title
 			font-size: 30px
@@ -163,6 +173,9 @@
 				margin-left: 70px
 			.text-agreement
 				margin-left: 70px
+	.wrapp-simple
+		&__title
+			font-size: 20px
 	/**/
 
 @media only screen and (max-width : 380px)
@@ -184,6 +197,11 @@
 				margin-left: 15px
 			.text-agreement
 				margin-left: 15px
+	.wrapp-simple
+		&__list
+			padding: 50px 15px
+			li
+				padding-left: 35px
 	/**/
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
