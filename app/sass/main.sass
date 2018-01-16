@@ -85,7 +85,6 @@ a
 	padding: 0 8px
 	color: #fff
 	font-size: 16px
-	// line-height: 48px
 	background-color: $pale
 	box-sizing: border-box
 	-moz-box-sizing: border-box
@@ -123,7 +122,7 @@ a
 	color: #fff
 	font-size: 14px
 	text-align: center
-	background-color: #0e0e0e
+	background-color: $accent
 	border-radius: 2px
 	cursor: pointer
 	transform: translate(0, -50%)
@@ -136,7 +135,7 @@ a
 	-webkit-box-sizing: border-box
 	&:hover, &:focus
 		color: #fff
-		background-color: #040404
+		background-color: $accent
 	.icon-bar
 		display: block
 		height: 2px
@@ -236,9 +235,14 @@ ul.slimmenu
 				vertical-align: middle
 			> i
 				display: inline-block
-				color: #333
+				color: $accent
 				font-size: 18px
 				vertical-align: middle
+				transition: .5s
+		.has-submenu:hover
+			> .sub-toggle
+				> i
+					transform: rotate(-90deg)
 	> li
 		&:first-child, &.has-submenu + li
 			border-left: 0
@@ -292,43 +296,6 @@ ul.slimmenu
 			font-size: 14px
 			color: $accent
 			text-decoration: underline
-/* section programms, delete if programms-scroll have a beast mode */
-.wrapp-programms
-	max-width: 1170px
-	margin: 30px auto -36px auto
-	.programms
-		display: flex
-		padding: 0
-		margin: 0 15px 
-		list-style: none
-		text-transform: uppercase
-		justify-content: flex-end
-		li
-			display: flex
-			flex: auto
-			align-items: center
-			background: $blue
-			border-bottom: 4px solid #fff
-			&:last-child
-				min-width: 145px
-			&:nth-child(2n)
-				background: $accent
-				border-bottom: 4px solid #ccc
-			&:nth-child(3)
-				min-width: 285px
-			&:nth-child(4)
-				a
-					padding: 19px 20px 
-			&:nth-child(5)
-				a
-					padding: 19px 20px 
-			a
-				padding: 6px 20px
-				color: #fff
-				font-size: 16px
-				z-index: 2
-				&:hover
-					color: #ccc
 /* section test */
 .wrapp-programms-scroll
 	margin-top: 50px
@@ -370,9 +337,7 @@ ul.slimmenu
 					float: left
 					height: 70px
 					height: 100%
-					padding: 0
 					background: $blue
-					padding: 6px 20px
 					border-bottom: 4px solid #fff
 					&:nth-child(2n)
 						background: $accent
@@ -388,11 +353,16 @@ ul.slimmenu
 					&:last-child
 						width: 145px
 					a
+						display: inline-block
+						width: 100%
+						height: 100%
+						padding: 6px 20px
 						color: #fff
 						font-size: 16px
 						z-index: 2
 						text-transform: uppercase
-
+						&:hover
+							text-decoration: underline
 
 /* section bannner */
 .wrapp-banner
@@ -500,7 +470,7 @@ ul.slimmenu
 		text-align: center
 		color: $accent
 		font-weight: bold
-		font-size: 26px
+		font-size: 24px
 		font-family: $raleway-ex
 		&-link
 			color: $accent
