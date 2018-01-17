@@ -1172,7 +1172,7 @@ ul.slimmenu {
   padding: 0;
   list-style-type: none; }
   ul.slimmenu .first-child > a {
-    padding: 12px 49.5px 12px 0; }
+    padding: 12px 46.7px 12px 0; }
   ul.slimmenu .last-child > a {
     padding: 12px 0 12px 16px; }
   ul.slimmenu:before {
@@ -1224,7 +1224,7 @@ ul.slimmenu {
         width: 100%; }
     ul.slimmenu li a {
       display: block;
-      padding: 12px 49.5px 12px 16px;
+      padding: 12px 47px 12px 16px;
       color: #333;
       font-size: 18px;
       font-weight: 400;
@@ -1617,6 +1617,70 @@ ul.slimmenu {
       .wrapp-simple__list li a {
         text-decoration: underline; }
 
+.mosmetro__list {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  background-image: url(/img/mosmetro.svg);
+  background-repeat: no-repeat;
+  -webkit-background-size: 94px 64px;
+          background-size: 94px 64px;
+  background-position: left center;
+  padding-left: 70px; }
+
+.mosmetro__item {
+  line-height: 1.1;
+  background-color: #FFF;
+  padding: 1px 0; }
+  .mosmetro__item a {
+    display: block;
+    padding-left: 3px;
+    border-left: 4px solid; }
+    .mosmetro__item a:hover {
+      opacity: .8; }
+  .mosmetro__item--brown a {
+    border-color: #85412e; }
+  .mosmetro__item--orange a {
+    border-color: #f07025; }
+  .mosmetro__item--green a {
+    border-color: #a8d92d; }
+  .mosmetro__item--red a {
+    border-color: #d92b2c; }
+
+.header__logo {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: flex-tsart;
+  -webkit-align-items: flex-tsart;
+      -ms-flex-align: flex-tsart;
+          align-items: flex-tsart;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  .header__logo:hover, .header__logo:active, .header__logo:visited, .header__logo:focus {
+    text-decoration: none;
+    color: inherit; }
+  .header__logo-image {
+    margin-right: 10px; }
+  .header__logo-text {
+    display: block;
+    line-height: 1; }
+    .header__logo-text--big {
+      font-family: "Raleway", sans-serif;
+      display: block;
+      color: #ab274f;
+      font-weight: 600;
+      font-size: 28px;
+      margin-bottom: 7px; }
+    .header__logo-text--small {
+      font-family: "PT Sans", sans-serif;
+      font-size: 14px; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -1732,6 +1796,16 @@ ul.slimmenu {
         margin-left: 80px; }
       .wrapp-form__form .form-name {
         margin-top: 0; }
+  .header__logo {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .header__logo-text {
+      max-width: 171px; }
+  .mosmetro__list {
+    width: 179px;
+    margin: 25px auto; }
   /**/ }
 
 @media only screen and (max-width: 582px) {
@@ -1811,67 +1885,3 @@ ul.slimmenu {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   /**/ }
-
-.mosmetro__list {
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
-  background-image: url(/img/mosmetro.png);
-  background-repeat: no-repeat;
-  -webkit-background-size: 94px 64px;
-          background-size: 94px 64px;
-  background-position: left center;
-  padding-left: 70px; }
-
-.mosmetro__item {
-  line-height: 1.1;
-  background-color: #FFF;
-  padding: 1px 0; }
-  .mosmetro__item a {
-    display: block;
-    padding-left: 3px;
-    border-left: 4px solid; }
-    .mosmetro__item a:hover {
-      opacity: .8; }
-  .mosmetro__item--brown a {
-    border-color: #85412e; }
-  .mosmetro__item--orange a {
-    border-color: #f07025; }
-  .mosmetro__item--green a {
-    border-color: #a8d92d; }
-  .mosmetro__item--red a {
-    border-color: #d92b2c; }
-
-.header__logo {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: flex-tsart;
-  -webkit-align-items: flex-tsart;
-      -ms-flex-align: flex-tsart;
-          align-items: flex-tsart;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-  .header__logo:hover, .header__logo:active, .header__logo:visited, .header__logo:focus {
-    text-decoration: none;
-    color: inherit; }
-  .header__logo-image {
-    margin-right: 10px; }
-  .header__logo-text {
-    display: block;
-    line-height: 1; }
-    .header__logo-text--big {
-      font-family: "Raleway", sans-serif;
-      display: block;
-      color: #ab274f;
-      font-weight: 600;
-      font-size: 28px;
-      margin-bottom: 7px; }
-    .header__logo-text--small {
-      font-family: "PT Sans", sans-serif;
-      font-size: 14px; }
