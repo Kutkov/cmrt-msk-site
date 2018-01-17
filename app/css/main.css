@@ -1,3 +1,5 @@
+@import url(../libs/owl-carousel/css/owl.carousel.css);
+@import url(../libs/owl-carousel/css/owl.theme.default.css);
 @font-face {
   font-family: "Raleway";
   font-weight: normal;
@@ -1457,7 +1459,9 @@ ul.slimmenu {
         margin-top: 0; }
 
 .owl-carousel {
-  display: none !important; }
+  display: none !important;
+  -ms-touch-action: none;
+      touch-action: none; }
   .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
     position: absolute;
     top: 20%;
