@@ -143,6 +143,23 @@
 		&__list
 			width: 179px
 			margin: 25px auto
+	.wrapp-additional
+		&__container
+			&-item
+				flex-basis: calc(96% - 20px)
+				&:nth-of-type(odd)
+					margin-right: 0
+				&-last
+					flex-basis: calc(96% - 20px)
+			.fas
+				margin-right: 5px
+	.wrapp-near
+		&__title
+			margin-bottom: 40px
+		&__container
+			&-item
+				margin-top: -25px
+				flex-basis: 100%
 	/**/
 
 @media only screen and (max-width : 582px)
@@ -184,6 +201,13 @@
 	.wrapp-simple
 		&__title
 			font-size: 20px
+	.title-blue
+		font-size: 20px
+	.more-questions
+		&__questions
+			line-height: 35px
+			font-size: 30px
+
 	/**/
 
 @media only screen and (max-width : 380px)
@@ -218,6 +242,10 @@
 			font-size: 24px
 		&__sub-title
 			font-size: 22px
+	.wrapp-additional
+		&__container
+			p
+				font-size: 16px
 	/**/
 
 

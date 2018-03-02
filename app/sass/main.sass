@@ -56,6 +56,12 @@ a
 		text-decoration: none
 
 // custom sass styles
+.title-blue
+	font-size: 24px
+	font-weight: bold
+	text-align: center
+	color: $accent
+
 /* section top menu */
 .menu
 	box-shadow: 0px 8px 7px -4px #ccc
@@ -408,7 +414,7 @@ ul.slimmenu
 		border-radius: 18px
 /* section dominance */	
 .wrapp-dominance
-	margin: 110px auto 80px auto
+	margin: 110px auto 0 auto
 	width: 1140px
 	&__list
 		display: flex
@@ -471,6 +477,7 @@ ul.slimmenu
 
 /* section ten questions */
 .wrapp-questions
+	margin-top: 80px
 	&__title
 		text-align: center
 		color: $accent
@@ -565,13 +572,13 @@ ul.slimmenu
 /* section simple */
 .wrapp-simple
 	overflow: hidden
-	margin-bottom: 60px
+	margin-top: 80px
 	&__title
 		font-size: 24px
 		font-weight: bold
 		text-align: center
 		color: $accent
-		margin-top: 50px
+		margin-top: 0
 		margin-bottom: 45px
 	&__list
 		margin: 0 auto
@@ -593,6 +600,139 @@ ul.slimmenu
 				left: 0
 			a
 				text-decoration: underline
+/* additional advantages wrapp */
+.wrapp-additional
+	margin-top: 80px
+	&__title
+		margin-bottom: 40px
+		margin-top: 0
+	&__container
+		padding: 0 15px
+		max-width: 1170px
+		margin: 0 auto
+		display: flex
+		flex-wrap: wrap
+		p
+			margin-top: 0
+			margin-bottom: 30px
+		&-item
+			flex-basis: calc(46% - 15px)
+			font-size: 18px
+			&:nth-of-type(odd)
+				margin-right: 30px
+			&-last
+				font-size: 18px
+				flex-basis: 96%
+		.fas
+			flex-basis: 4%
+			font-size: 25px
+			color: $accent
+			margin-top: 10px
+			margin-bottom: 30px
+/* section always near */
+.wrapp-near
+	margin-top: 80px
+	&__title
+		margin-top: 0
+	&__container
+		display: flex
+		flex-wrap: wrap
+		max-width: 1170px
+		// padding: 0 15px
+		margin: 0 auto
+		&-item
+			flex-basis: 33.3%
+			p
+				padding: 15px
+				background: $pale
+				margin: 25px 15px 
+				font-size: 18px
+				position: relative
+				&:before
+					content: ''
+					height: 20px
+					width: 20px
+					position: absolute
+					border-top: 2px solid $pink
+					border-left: 2px solid $pink
+					left: 0
+					top: 0
+				&:after
+					content: ''
+					height: 20px
+					width: 20px
+					position: absolute
+					border-bottom: 2px solid $pink
+					border-right: 2px solid $pink
+					bottom: 0
+					right: 0
+
+/* section more questions */
+.more-questions
+	background: $pale
+	text-align: center
+	color: $accent
+	padding: 25px 0
+	&__questions
+		font-size: 30px
+		display: block
+		padding: 0 10px
+	&__phone
+		font-size: 35px
+		font-weight: bold
+		a
+			color: $accent
+			&:hover
+				color: $darkpink
+			&:focus
+				text-decoration: none
+/* section map */
+#map 
+	width: 100%
+	height: 450px
+	position: relative
+	margin-bottom: 200px
+.map__menu 
+	list-style: none
+	padding: 0
+	margin: 0
+	position: absolute
+	top: 100px
+	right: 200px
+	background: #fff
+	border-radius: 4px
+	box-shadow: 0 0 18px #626262
+	font-size: 16px
+	&-metro
+		color: $accent
+		font-weight: bold
+		display: block
+		max-width: 150px
+		line-height: 20px
+	&-adress
+		color: #333
+	.submenu 
+		list-style: none
+		margin: 0
+		padding: 0
+		li
+			padding: 7px 20px
+			&:first-child
+				padding-top: 14px
+			&:last-child
+				padding-bottom: 14px
+			&:focus
+				outline: none
+			a
+				&:focus
+					outline: none
+					text-decoration: none
+		.active
+			background: #ebebeb
+
+
+
+
 
 
 @import "valya"
