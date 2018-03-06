@@ -1,7 +1,10 @@
 @import "vars"
 
 /*==========  Desktop First  ==========*/
-
+@media only screen and (max-width : 1700px)
+	.map__menu
+		right: 35px
+	/**/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	.wrapp-programms
@@ -28,11 +31,12 @@
 				height: 130px
 				width: 245px
 				resize: none
+	.map__menu
+		right: 8px
 	/**/
 
 @media only screen and (max-width : 1140px)
 	.wrapp-programms-scroll
-		margin-bottom: -70px
 		.scrollframe-container
 			width: auto
 			margin: 0 auto
@@ -53,6 +57,8 @@
 		width: auto
 		&__list-item
 			padding: 0 10px
+	.map__menu
+		display: none
 	/**/
 
 /* Medium Devices, Desktops */
@@ -85,6 +91,11 @@
 		&__info
 			&-text
 				width: 390px
+	.wrapp-footer
+		&__metro
+			display: none
+		&__annotation
+			font-size: 14px
 	/**/
 
 /* Small Devices, Tablets */
@@ -182,6 +193,11 @@
 	.wrapp-banner
 		&__title
 			font-size: 30px
+		&__advantages
+			li
+				padding: 12px 0 0 50px
+				&:before
+					left: 5px
 	.owl-carousel
 		.owl-item
 			.item
@@ -207,15 +223,21 @@
 		&__questions
 			line-height: 35px
 			font-size: 30px
+	#footerMenuSecond
+		padding: 0
 
 	/**/
 
 @media only screen and (max-width : 380px)
 	.wrapp-banner
+		padding-top: 70px
 		&__title
 			font-size: 26px
 		&__sub-title
 			font-size: 26px
+		&__advantages
+			li
+				padding: 12px 0 0 40px
 	.owl-carousel
 		.owl-item
 			.item

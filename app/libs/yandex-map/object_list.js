@@ -5,7 +5,8 @@ function init() {
     // Создание экземпляра карты.
     var myMap = new ymaps.Map('map', {
             center: [50.443705, 30.530946],
-            zoom: 14
+            zoom: 14,
+            controls: ['zoomControl']
         }, {
             searchControlProvider: 'yandex#search'
         }),
@@ -49,12 +50,11 @@ function init() {
 
     function createSubMenu (item, collection, submenu) {
         // Пункт подменю.
-        var submenuItem = $('<li><a href="#">' + '<span class="map__menu-metro">' + item.metro + '</span>' + '<span class="map__menu-adress">' + item.content + '</span>' + '</a></li>'),
+        var submenuItem = $('<li><a href="#">' + '<span class="map__menu-metro">' + item.metro + '</span>' + '</a></li>'),
         // Создаем метку.
             placemark = new ymaps.Placemark(item.center, { balloonContent:  '<div class="ymap_content">' + 
                     '<div class="ymap_header">' + item.ytype + ' ' + item.name + '</div>' + 
                     '<div class="ymap_adr">' + 'Адрес: ' + '<b>' + item.content + '</b></div>' + 
-                    '<div class="ymap_metro">' + 'Метро: ' + '<b>' + item.metro + '</b></div>' +
                     '<div class="ymap_deliv">' + 'Срок доставки: ' + '<b>' + item.deliv + '</b></div>' +
                     '<div class="ymap_rejim">' + 'Режим работы: ' + '<b>' + item.time + '</b></div>' +
                     '<div class="ymap_price">' + 'Цена: ' + '<b>' + item.price + '</b></div>' +
@@ -101,7 +101,7 @@ function init() {
     }
 
     // Добавляем меню в тэг BODY.
-    menu.appendTo($('body'));
+    menu.appendTo($('.wrapp-map'));
     // Выставляем масштаб карты чтобы были видны все группы.
     myMap.setBounds(myMap.geoObjects.getBounds());
 }

@@ -1,0 +1,148 @@
+// wrapp-programm-scroll
+.inner-page
+	background: $accent
+	.scrollframe-container
+		.frame
+			ul
+				li
+					border: none
+					&:nth-child(2n)
+						border: none
+		.scrollbar
+			margin-top: 0
+			
+/* sidebar */
+.inner-content
+	margin-top: 40px
+.sidebar
+	font-family: $raleway
+	max-width: 340px
+	li
+		font-weight: 500
+		margin-bottom: 7px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		a
+			flex-grow: 8
+			padding: 6px 10px
+			background: $pale
+			&:hover
+				color: $darkblue
+				background: $accent
+				color: #fff
+	&__tpl-parent
+		position: relative
+		i
+			flex-grow: 1
+			font-size: 20px
+			color: $darkblue
+			cursor: pointer
+			display: flex
+			background: $pale
+			align-items: center
+			padding-left: 12px
+			&:hover
+				background: $accent
+				color: #fff
+		ul
+			display: none
+			margin-top: 9px
+			flex-grow: 9
+			flex-basis: 100%
+			li
+				a
+					background: none
+					border-bottom: 1px solid $pale
+					padding: 5px 15px
+
+					&:hover
+						border-left: 1px solid $darkpink
+						background: none
+						color: #000
+				&:last-child
+					a
+						border-bottom: none
+.breadcrumbs
+	li
+		display: inline-block
+		margin-right: 10px
+		a
+			color: #858585
+			text-decoration: underline
+			&:hover
+				color: $accent
+				&:after
+					color: #858585
+			&:after
+				margin-left: 10px
+				content: '»'
+				display: inline-block
+		&:last-child
+			a:after
+				content: none
+	.active
+		a
+			text-decoration: none
+
+/* offer main banner */
+.offer-banner
+	position: relative
+	border: 10px solid $pale
+	font-family: $raleway
+	width: 100%
+	overflow: hidden
+	background: $pale
+	margin-bottom: 15px
+	&__palebg
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0,134,207, .23)
+		top: 0
+		left: 0
+	&__img
+		position: absolute
+	&__content
+		position: relative
+		max-width: 400px
+		height: 100%
+		background: rgba(0,0,0, .35)
+		padding-top: 30px
+		padding-bottom: 20px
+		&-title
+			color: #fff
+			padding: 10px 10px 10px 20px
+			background: $accent
+			font-size: 24px
+			font-weight: 600
+			line-height: 30px
+			position: relative
+			&:after
+				content: ''
+				width: 0
+				height: 0
+				border: 40px solid transparent
+				border-left: 40px solid $accent
+				border-top: 40px solid $accent
+				position: absolute
+				right: -80px
+				top: 0
+		&-info
+			color: #fff
+			padding: 0 50px 0 20px
+			font-size: 18px
+		&-submit
+			margin-left: 20px
+			margin-top: 10px
+			background: $pink
+			border: none
+			border-radius: 3px
+			color: #fff
+			padding: 3px 20px
+			cursor: pointer
+			font-size: 20px
+			transition: .2s linear
+			&:hover
+				box-shadow: 250px 0 0 0 rgba(0,0,0,.3) inset
+

@@ -43,6 +43,17 @@ body
 	font-family: $ptsans
 	//font-family: $raleway
 
+h1,h2,h3,h4,h5,h6
+	font-family: $raleway
+	font-weight: 600
+h1
+	font-size: 32px
+	margin-top: 25px
+	margin-bottom: 25px
+h2
+	font-size: 26px
+	margin-top: 20px
+	margin-bottom: 10px
 
 ul
 	margin: 0
@@ -196,6 +207,8 @@ ul.slimmenu
 			list-style-type: none
 		li
 			background: $pale
+			// custom width
+			width: 100%
 		> ul
 			position: absolute
 			left: 0
@@ -303,13 +316,15 @@ ul.slimmenu
 		a
 			font-size: 14px
 			color: $accent
-			text-decoration: underline
+			border-bottom: 1px solid $accent
+			&:hover
+				text-decoration: none
+				border-bottom: 1px dashed $accent
 /* section test */
 .wrapp-programms-scroll
 	margin-top: 50px
-	margin-bottom: -35px
 	.scrollframe-container
-		width: 1140px
+		width: 1110px
 		margin: 0 auto
 		touch-action: none
 		.scrollbar
@@ -317,7 +332,7 @@ ul.slimmenu
 			margin: 0 0 1em 0
 			margin-top: 15px
 			height: 2px
-			background: #000
+			background: $accent
 			line-height: 0
 			display: none
 			.handle
@@ -351,11 +366,11 @@ ul.slimmenu
 						background: $accent
 						border-bottom: 4px solid #ccc
 					&:nth-child(1)
-						width: 245px
+						width: 235px
 					&:nth-child(2)
-						width: 285px
+						width: 275px
 					&:nth-child(3)
-						width: 285px
+						width: 275px
 					&:nth-child(4)
 						width: 180px
 					&:last-child
@@ -380,8 +395,14 @@ ul.slimmenu
 	color: #fff
 	text-align: center
 	z-index: 1
+	margin-top: -35px
+	padding-top: 90px
+	padding-bottom: 30px
+	&__container
+		max-width: 1140px
+		padding: 0 15px
+		margin: 0 auto
 	&__title
-		margin-top: 90px
 		font-size: 44px
 		line-height: 1.3em
 		font-weight: 700
@@ -671,8 +692,9 @@ ul.slimmenu
 .more-questions
 	background: $pale
 	text-align: center
-	color: $accent
+	color: $darkblue
 	padding: 25px 0
+	margin-top: 80px
 	&__questions
 		font-size: 30px
 		display: block
@@ -681,36 +703,37 @@ ul.slimmenu
 		font-size: 35px
 		font-weight: bold
 		a
-			color: $accent
+			color: $darkblue
 			&:hover
 				color: $darkpink
 			&:focus
 				text-decoration: none
 /* section map */
+.wrapp-map
+	overflow: hidden
+	width: 100%
+	height: 480px
+	padding: 0
+	margin: 0
 #map 
 	width: 100%
-	height: 450px
+	height: 100%
 	position: relative
 	margin-bottom: 200px
+	display: block
 .map__menu 
 	list-style: none
 	padding: 0
 	margin: 0
 	position: absolute
 	top: 100px
-	right: 200px
+	right: 300px
 	background: #fff
 	border-radius: 4px
 	box-shadow: 0 0 18px #626262
 	font-size: 16px
 	&-metro
-		color: $accent
-		font-weight: bold
 		display: block
-		max-width: 150px
-		line-height: 20px
-	&-adress
-		color: #333
 	.submenu 
 		list-style: none
 		margin: 0
@@ -729,12 +752,40 @@ ul.slimmenu
 					text-decoration: none
 		.active
 			background: #ebebeb
-
-
-
-
-
+/* section footer */
+.wrapp-footer
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	max-width: 1170px
+	padding: 0 15px
+	margin: 40px auto 0
+	&__menu
+		margin-bottom: 20px
+		li
+			a
+				font-family: $raleway
+				font-weight: 500
+				&:hover
+					color: $accent
+					&:before
+						content: '— '
+				&:focus
+					outline: none
+					text-decoration: none
+					color: $accent
+	&__metro
+		padding-right: 20px
+		margin-bottom: 20px
+	&__phone
+		margin-bottom: 20px
+	&__annotation
+		font-family: $raleway
+		font-weight: normal
+#footerMenuSecond
+	padding-left: 5px
 
 @import "valya"
+@import "inner"
 @import "media" 
 
