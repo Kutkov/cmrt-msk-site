@@ -46,7 +46,6 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/sly-plugin/sly.min.js',
 		'app/libs/sly-plugin/horizontal.js',
 		'app/libs/slim-menu/jquery.slimmenu.min.js',
-		'app/libs/slim-menu/jquery-easing.js',
 		'app/libs/owl-carousel/js/owl.carousel.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])

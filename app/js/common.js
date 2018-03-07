@@ -7,10 +7,10 @@ $(function(){
     {
         resizeWidth: '1140',
         collapserTitle: '<div class="search-input-m"><input type="submit" value><input type="text" placeholder="Поиск по сайту"></div>',
-        animSpeed:'slow',
+        animSpeed:'fast',
         indentChildren: true,
         childrenIndenter: '&raquo;',
-        easingEffect: 'easeOutCirc'
+        easingEffect: null
     });
     // dominance section
     $('.owl-carousel').owlCarousel(
@@ -32,7 +32,7 @@ $(function(){
             }
         }
     });
-    
+
     // sidebar menu demo
 
     $('.sidebar__tpl-parent > a').after('<i class="fas fa-angle-double-down"></i>');

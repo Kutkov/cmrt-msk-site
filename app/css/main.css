@@ -2545,9 +2545,9 @@ ul.slimmenu {
         color: #0588d0;
         font-size: 18px;
         vertical-align: middle;
-        -webkit-transition: .5s;
-        -o-transition: .5s;
-        transition: .5s; }
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
     ul.slimmenu li .has-submenu:hover > .sub-toggle > i {
       -webkit-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
