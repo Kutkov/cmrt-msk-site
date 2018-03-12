@@ -2352,32 +2352,6 @@ a {
   color: #0588d0; }
 
 /* section top menu */
-.menu {
-  -webkit-box-shadow: 0px 8px 7px -4px #ccc;
-          box-shadow: 0px 8px 7px -4px #ccc; }
-  .menu .wrapper {
-    max-width: 1170px;
-    margin: 0 auto; }
-  .menu__main {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0;
-    margin: 0 -15px;
-    list-style: none; }
-    .menu__main li {
-      -webkit-box-flex: 1;
-      -webkit-flex: auto;
-          -ms-flex: auto;
-              flex: auto;
-      padding: 20px 0;
-      text-align: center; }
-      .menu__main li a {
-        font-size: 18px; }
-        .menu__main li a:hover {
-          color: #000; }
-
 /* section top sub menu */
 .wrapp-menu {
   -webkit-box-shadow: 0px 8px 7px -4px #ccc;
@@ -2457,19 +2431,27 @@ a {
 ul.slimmenu {
   width: 1140px;
   margin: 0 auto;
-  padding: 0;
-  list-style-type: none; }
-  ul.slimmenu .first-child > a {
-    padding: 12px 46.7px 12px 0; }
-  ul.slimmenu .last-child > a {
-    padding: 12px 0 12px 16px; }
-  ul.slimmenu:before {
-    content: '';
-    display: table; }
-  ul.slimmenu:after {
-    content: '';
-    display: table;
-    clear: both; }
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+  ul.slimmenu.collapsed {
+    display: block; }
+    ul.slimmenu.collapsed .has-submenu {
+      padding: 0; }
   ul.slimmenu.collapsed li {
     display: block;
     width: 100%;
@@ -2488,9 +2470,7 @@ ul.slimmenu {
     ul.slimmenu.collapsed li .sub-toggle {
       height: 40px; }
   ul.slimmenu li {
-    position: relative;
-    float: left;
-    display: inline-block; }
+    position: relative; }
     ul.slimmenu li ul {
       margin: 0;
       list-style-type: none; }
@@ -2513,7 +2493,7 @@ ul.slimmenu {
         width: 100%; }
     ul.slimmenu li a {
       display: block;
-      padding: 12px 47px 12px 16px;
+      padding: 10px 15px 10px 15px;
       color: #333;
       font-size: 18px;
       font-weight: 400;
@@ -2554,6 +2534,8 @@ ul.slimmenu {
               transform: rotate(-90deg); }
   ul.slimmenu > li:first-child, ul.slimmenu > li.has-submenu + li {
     border-left: 0; }
+  ul.slimmenu .has-submenu {
+    padding-right: 33px; }
 
 /* section logo info */
 .wrapp-logo {
