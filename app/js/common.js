@@ -34,11 +34,8 @@ $(function(){
     });
 
     // sidebar menu demo
-
     $('.sidebar__tpl-parent > a').after('<i class="fas fa-angle-double-down"></i>');
-
     $('.sidebar__tpl-parent > i').click(openMenu);
-
     function openMenu(){
         if($(this).next().css('display') == 'block'){
             $(this).next().css('display', 'none');
