@@ -17,6 +17,7 @@
 .sidebar
 	font-family: $raleway
 	max-width: 340px
+	margin-bottom: 30px
 	li
 		font-weight: 500
 		margin-bottom: 7px
@@ -24,7 +25,7 @@
 		justify-content: space-between
 		flex-wrap: wrap
 		a
-			flex-grow: 8
+			flex-grow: 4
 			padding: 6px 10px
 			background: $pale
 			&:hover
@@ -41,14 +42,17 @@
 			display: flex
 			background: $pale
 			align-items: center
-			padding-left: 12px
+			// padding-left: 12px
 			&:hover
 				background: $accent
 				color: #fff
+			&:before
+				display: block
+				margin: 0 auto
 		ul
 			display: none
 			margin-top: 9px
-			flex-grow: 9
+			flex-grow: 5
 			flex-basis: 100%
 			li
 				a
@@ -63,6 +67,7 @@
 				&:last-child
 					a
 						border-bottom: none
+// breadcrumbs
 .breadcrumbs
 	li
 		display: inline-block
@@ -145,4 +150,71 @@
 			transition: .2s linear
 			&:hover
 				box-shadow: 250px 0 0 0 rgba(0,0,0,.3) inset
+
+/* table price */
+.price_table
+	width: 100%
+	border: 1px solid #ccc
+	border-collapse: collapse
+	margin-bottom: 30px
+	margin-top: 20px
+	thead
+		cursor: pointer
+		border: 1px solid $blue
+		box-shadow: 0px 8px 7px -4px #ccc
+		tr
+			th
+				font-weight: 500
+				padding: 5px 20px
+				background: $blue
+				color: #fff
+				font-size: 20px
+				&:last-child
+					text-align: right
+	tbody
+		display: none
+		tr
+			th
+				border: 1px solid #aaa
+				background: $pale
+				text-align: center
+				font-size: 16px
+				font-weight: 600
+				color: #333
+				padding: 5px 20px
+				&:first-child
+					text-align: left
+				.price_tip
+					display: inline-block
+					cursor: pointer
+					background: $blue
+					font-size: 14px
+					width: 21px
+					height: 21px
+					color: #fff
+					border-radius: 50%
+					position: relative
+					&_text
+						visibility: hidden
+						position: absolute
+						color: #fff
+						width: 250px
+						left: -250px
+						top: 40px
+						padding: 5px 10px
+						border-radius: 5px
+						font-weight: 300
+						background-color: $darkpink
+						box-shadow: 0px 8px 7px -4px #ccc
+					&:hover .price_tip_text
+						visibility: visible
+			td
+				text-align: center
+				padding: 5px 20px
+				background: #fff
+				border: 1px solid #ccc
+				&:first-child
+					text-align: left
+			&:hover td
+				background: $pale
 
